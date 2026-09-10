@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fahim Uzzaman Khan - personal anime and internet culture profile.">
+<title>Fahim Uzzaman Khan — Anime Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#0f172a;--bg2:#080d1d;--text:#f8fafc;--muted:#94a3b8;
+  --cyan:#00e5ff;--purple:#8b5cf6;--pink:#ec4899;
+  --glass:rgba(15,23,42,.62);--line:rgba(139,92,246,.28);
+}
+body{
+  font-family:Poppins,sans-serif;color:var(--text);background:
+  radial-gradient(circle at 15% 10%,rgba(139,92,246,.13),transparent 28%),
+  radial-gradient(circle at 85% 60%,rgba(0,229,255,.10),transparent 30%),
+  var(--bg);overflow-x:hidden
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-4;background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.015) 50%,transparent 100%)}
+#particles{position:fixed;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none}
+.blob{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(100px);z-index:-2;opacity:.28;animation:drift 10s ease-in-out infinite}
+.blob.a{background:#7c3aed;top:-180px;left:-180px}.blob.b{background:#06b6d4;right:-190px;bottom:-160px;animation-delay:2s}
+@keyframes drift{50%{transform:translateY(-35px) translateX(25px)}}
+
+#loader{position:fixed;inset:0;background:#050816;display:grid;place-items:center;z-index:9999;transition:.7s}
+#loader.hide{opacity:0;visibility:hidden}
+.ring{width:72px;height:72px;border:4px solid rgba(255,255,255,.08);border-top-color:var(--cyan);border-right-color:var(--purple);border-radius:50%;animation:spin 1s linear infinite;margin:auto}
+.loadtext{font:700 12px Orbitron;letter-spacing:4px;color:var(--cyan);margin-top:18px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:17px 7%;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(5,8,22,.68);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06)
+}
+.logo{font:800 21px Orbitron}.logo span{color:var(--cyan);text-shadow:0 0 18px var(--cyan)}
+nav ul{list-style:none;display:flex;gap:26px}
+nav a{color:#cbd5e1;text-decoration:none;font-size:13px;transition:.25s}
+nav a:hover{color:var(--cyan);text-shadow:0 0 12px var(--cyan)}
+
+section{max-width:1400px;margin:auto;padding:105px 7%}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding-top:125px}
+.hero-inner{max-width:950px}
+.kicker{font:600 12px Orbitron;letter-spacing:5px;color:var(--cyan);margin-bottom:18px}
+.hero h1{
+  font:800 clamp(40px,8vw,88px)/1.05 Orbitron;
+  background:linear-gradient(90deg,#fff,var(--cyan),var(--purple),#fff);
+  background-size:300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  animation:shine 6s linear infinite
+}
+@keyframes shine{to{background-position:300%}}
+.hero h2{font-size:clamp(17px,3vw,27px);font-weight:400;color:#cbd5e1;margin-top:22px}
+.hero h2 b{color:var(--cyan);font-weight:500}
+.hero-desc{max-width:680px;margin:23px auto;color:var(--muted);line-height:1.9;font-size:14px}
+.buttons{display:flex;justify-content:center;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  border:0;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
+  padding:13px 23px;border-radius:50px;text-decoration:none;font:600 13px Poppins;transition:.3s
+}
+.primary{color:#fff;background:linear-gradient(135deg,var(--cyan),var(--purple));box-shadow:0 0 28px rgba(0,229,255,.25)}
+.primary:hover{transform:translateY(-5px);box-shadow:0 0 42px rgba(0,229,255,.45)}
+.outline{color:var(--cyan);border:1px solid rgba(0,229,255,.38);background:rgba(0,229,255,.06)}
+.outline:hover{transform:translateY(-5px);background:rgba(0,229,255,.13)}
+
+.section-head{text-align:center;margin-bottom:54px}
+.section-head small{font:600 11px Orbitron;letter-spacing:4px;color:var(--cyan)}
+.section-head h2{font:700 clamp(30px,5vw,47px) Orbitron;margin-top:10px}
+.section-head h2 span{color:var(--purple);text-shadow:0 0 20px rgba(139,92,246,.45)}
+.glass{
+  background:var(--glass);border:1px solid var(--line);border-radius:24px;
+  backdrop-filter:blur(18px);box-shadow:0 20px 55px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.045)
+}
+
+.about-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.info{padding:29px 20px;text-align:center;transition:.35s}
+.info:hover{transform:translateY(-9px);border-color:rgba(0,229,255,.5);box-shadow:0 18px 45px rgba(0,229,255,.10)}
+.info-icon{width:58px;height:58px;display:grid;place-items:center;margin:auto;border-radius:17px;color:var(--cyan);background:rgba(0,229,255,.07);border:1px solid rgba(0,229,255,.2);font-size:22px}
+.info h3{font-size:15px;margin-top:16px}.info p{font-size:12px;color:var(--muted);margin-top:7px;line-height:1.6}
+
+.anime-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.anime{overflow:hidden;transition:.4s}
+.anime:hover{transform:translateY(-11px);border-color:rgba(139,92,246,.7);box-shadow:0 22px 55px rgba(139,92,246,.16)}
+.poster{height:370px;overflow:hidden;background:#111827;position:relative}
+.poster:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(transparent,rgba(2,6,23,.55))}
+.poster img{width:100%;height:100%;object-fit:cover;display:block;transition:.55s}
+.anime:hover img{transform:scale(1.06)}
+.anime-content{padding:21px}.anime-content h3{font:600 16px Orbitron}
+.anime-content p{font-size:12px;color:var(--muted);line-height:1.75;margin-top:9px}
+.tag{display:inline-block;margin-top:13px;padding:5px 10px;border-radius:30px;background:rgba(139,92,246,.12);color:#c4b5fd;font-size:9px;letter-spacing:.5px}
+
+.social-grid{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.social{width:290px;padding:29px;text-align:center;text-decoration:none;color:#fff;transition:.35s}
+.social:hover{transform:translateY(-9px);box-shadow:0 20px 50px rgba(139,92,246,.16)}
+.social i{font-size:39px;margin-bottom:13px}.fb i{color:#1877f2}.ig i{color:#ec4899}
+.social h3{font:600 16px Orbitron}.social p{color:var(--muted);font-size:12px;margin-top:7px}
+
+.interest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.interest{padding:24px;display:flex;gap:16px;align-items:center;transition:.3s}
+.interest:hover{transform:translateX(5px);border-color:rgba(0,229,255,.4)}
+.interest i{width:42px;text-align:center;font-size:23px;color:var(--cyan)}
+.interest h3{font-size:14px}.interest p{color:var(--muted);font-size:11px;margin-top:4px;line-height:1.5}
+
+.photo-wrap{max-width:600px;margin:auto;padding:32px;text-align:center}
+.avatar{width:155px;height:155px;border-radius:50%;margin:0 auto 20px;overflow:hidden;display:grid;place-items:center;background:#020617;border:3px solid var(--cyan);box-shadow:0 0 35px rgba(0,229,255,.25)}
+.avatar img{width:100%;height:100%;object-fit:cover;display:none}.avatar i{font-size:45px;color:#64748b}
+.file-input{display:none}.upload-note{color:var(--muted);font-size:11px;margin-top:13px}
+
+footer{padding:42px 20px;text-align:center;border-top:1px solid rgba(255,255,255,.06);background:rgba(2,6,23,.55)}
+footer strong{font:700 20px Orbitron}footer strong span{color:var(--cyan)}
+footer p{color:var(--muted);font-size:11px;margin-top:8px}
+
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .75s ease,transform .75s ease}
+.reveal.active{opacity:1;transform:none}
+
+@media(max-width:1000px){.about-grid,.anime-grid,.interest-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){
+  nav{padding:15px 5%}nav ul{display:none}
+  section{padding:78px 5%}.about-grid,.anime-grid,.interest-grid{grid-template-columns:1fr}
+  .poster{height:430px}.hero{padding-top:105px}.hero-desc{font-size:13px}
+}
+</style>
+</head>
+<body>
+<div id="loader"><div><div class="ring"></div><div class="loadtext">LOADING...</div></div></div>
+<canvas id="particles"></canvas><div class="blob a"></div><div class="blob b"></div>
+
+<nav>
+  <div class="logo">FAHIM<span>.</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About</a></li>
+    <li><a href="#anime">Anime</a></li><li><a href="#social">Social</a></li><li><a href="#photo">Photo</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="kicker">SYSTEM ONLINE • WELCOME</div>
+    <h1>FAHIM UZZAMAN KHAN</h1>
+    <h2>Anime Lover <b>|</b> Student <b>|</b> Internet Explorer</h2>
+    <p class="hero-desc">Welcome to my digital space — a personal profile built around anime, gaming, Discord and internet culture.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#about"><i class="fa-solid fa-user"></i> Explore Me</a>
+      <a class="btn outline" href="#anime"><i class="fa-solid fa-bolt"></i> Enter Anime Zone</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-head reveal"><small>01 • PROFILE</small><h2>About <span>Me</span></h2></div>
+  <div class="about-grid">
+    <div class="info glass reveal"><div class="info-icon"><i class="fa-solid fa-user"></i></div><h3>Name</h3><p>Fahim Uzzaman Khan</p></div>
+    <div class="info glass reveal"><div class="info-icon"><i class="fa-solid fa-cake-candles"></i></div><h3>Age</h3><p>15 Years Old</p></div>
+    <div class="info glass reveal"><div class="info-icon"><i class="fa-solid fa-location-dot"></i></div><h3>Location</h3><p>Mymensingh, Bangladesh</p></div>
+    <div class="info glass reveal"><div class="info-icon"><i class="fa-solid fa-school"></i></div><h3>School</h3><p>Anjuman Government High School, Netrokona</p></div>
+  </div>
+</section>
+
+<section id="anime">
+  <div class="section-head reveal"><small>02 • OTAKU ZONE</small><h2>Favourite <span>Anime</span></h2></div>
+  <div class="anime-grid">
+    <article class="anime glass reveal">
+      <div class="poster"><img src="assets/attack-on-titan.jpg" alt="Attack on Titan"></div>
+      <div class="anime-content"><h3>Attack on Titan</h3><p>A brutal fight for humanity's survival, filled with mystery, sacrifice and unforgettable battles.</p><span class="tag">DARK • ACTION</span></div>
+    </article>
+    <article class="anime glass reveal">
+      <div class="poster"><img src="assets/death-note.jpg" alt="Death Note"></div>
+      <div class="anime-content"><h3>Death Note</h3><p>A mysterious notebook turns into a dangerous psychological battle between justice, power and intelligence.</p><span class="tag">THRILLER • MYSTERY</span></div>
+    </article>
+    <article class="anime glass reveal">
+      <div class="poster"><img src="assets/one-piece.jpg" alt="One Piece"></div>
+      <div class="anime-content"><h3>One Piece</h3><p>Luffy and his crew sail across the Grand Line chasing adventure, freedom and the legendary treasure.</p><span class="tag">ADVENTURE • SHONEN</span></div>
+    </article>
+    <article class="anime glass reveal">
+      <div class="poster"><img src="assets/solo-leveling.jpg" alt="Solo Leveling"></div>
+      <div class="anime-content"><h3>Solo Leveling</h3><p>Sung Jinwoo rises from the weakest hunter to an overwhelming force through a mysterious leveling system.</p><span class="tag">ACTION • FANTASY</span></div>
+    </article>
+  </div>
+</section>
+
+<section id="social">
+  <div class="section-head reveal"><small>03 • CONNECT</small><h2>My <span>Socials</span></h2></div>
+  <div class="social-grid">
+    <a class="social glass fb reveal" href="https://www.facebook.com/profile.php?id=61588501138259" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-facebook"></i><h3>Facebook</h3><p>Visit my Facebook profile</p>
+    </a>
+    <a class="social glass ig reveal" href="https://www.instagram.com/crux_.fahim/?hl=en" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-instagram"></i><h3>Instagram</h3><p>@crux_.fahim</p>
+    </a>
+  </div>
+</section>
+
+<section id="interests">
+  <div class="section-head reveal"><small>04 • MY WORLD</small><h2>My <span>Interests</span></h2></div>
+  <div class="interest-grid">
+    <div class="interest glass reveal"><i class="fa-solid fa-tv"></i><div><h3>Anime</h3><p>Attack on Titan • Death Note • One Piece • Solo Leveling • Many more</p></div></div>
+    <div class="interest glass reveal"><i class="fa-solid fa-gamepad"></i><div><h3>Gaming</h3><p>Free Fire • Roblox</p></div></div>
+    <div class="interest glass reveal"><i class="fa-solid fa-globe"></i><div><h3>Internet</h3><p>Exploring the digital world</p></div></div>
+    <div class="interest glass reveal"><i class="fa-brands fa-discord"></i><div><h3>Discord</h3><p>fatalx_doom_7311</p></div></div>
+  </div>
+</section>
+
+<section id="photo">
+  <div class="section-head reveal"><small>05 • PROFILE</small><h2>My <span>Photo</span></h2></div>
+  <div class="photo-wrap glass reveal">
+    <div class="avatar"><img id="preview" src="assets/fahim-profile.jpg" alt="Fahim profile photo" style="display:block"><i id="avatarIcon" class="fa-solid fa-user" style="display:none"></i></div>
+    <label class="btn primary"><i class="fa-solid fa-image"></i> Choose Profile Photo
+      <input class="file-input" id="photoInput" type="file" accept="image/png,image/jpeg,image/webp">
+    </label>
+    <p class="upload-note">Your profile photo is already set. You can choose another photo anytime.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>FAHIM<span>.</span></strong>
+  <p>Anime • Gaming • Internet • Dreams</p>
+  <p>© 2026 Fahim Uzzaman Khan. All rights reserved.</p>
+</footer>
+
+<script>
+window.addEventListener("load",()=>setTimeout(()=>document.getElementById("loader").classList.add("hide"),850));
+
+const canvas=document.getElementById("particles"),ctx=canvas.getContext("2d");
+let particles=[];
+function resize(){canvas.width=innerWidth;canvas.height=innerHeight}
+resize();addEventListener("resize",resize);
+class Particle{
+  constructor(){this.x=Math.random()*canvas.width;this.y=Math.random()*canvas.height;this.r=Math.random()*1.8+.4;this.vx=(Math.random()-.5)*.35;this.vy=(Math.random()-.5)*.35;this.a=Math.random()*.55}
+  update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>canvas.width)this.vx*=-1;if(this.y<0||this.y>canvas.height)this.vy*=-1}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,229,255,${this.a})`;ctx.fill()}
+}
+for(let i=0;i<(innerWidth<700?55:115);i++)particles.push(new Particle());
+(function loop(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(p=>{p.update();p.draw()});requestAnimationFrame(loop)})();
+
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("active")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
+
+document.getElementById("photoInput").addEventListener("change",e=>{
+  const file=e.target.files[0]; if(!file)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    const img=document.getElementById("preview");
+    img.src=ev.target.result;img.style.display="block";
+    document.getElementById("avatarIcon").style.display="none";
+  };
+  reader.readAsDataURL(file);
+});
+</script>
+</body>
+</html>
